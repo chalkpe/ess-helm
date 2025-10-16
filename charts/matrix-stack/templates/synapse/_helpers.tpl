@@ -131,7 +131,7 @@ env:
   service:
     name: "{{ $root.Release.Name }}-matrix-authentication-service"
     port:
-      name: http
+      number: 8080
 {{- end }}
 {{- end }}
 {{- end }}

@@ -34,7 +34,7 @@ spec:
           service:
             name: "{{ $.Release.Name }}-matrix-rtc-authorisation-service"
             port:
-              name: http
+              number: 8080
 {{ if .sfu.enabled }}
       - path: /
         pathType: Prefix

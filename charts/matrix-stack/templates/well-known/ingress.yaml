@@ -28,7 +28,7 @@ spec:
           service:
             name: "{{ $.Release.Name }}-well-known"
             port:
-              name: haproxy-wkd
+              number: 8010
 {{- else }}
       - path: /.well-known/matrix
         pathType: {{ include "element-io.ess-library.ingress.ingress-nginx-dot-path-type" (dict "root" $ "context" .ingress.controllerType) }}
@@ -36,7 +36,7 @@ spec:
           service:
             name: "{{ $.Release.Name }}-well-known"
             port:
-              name: haproxy-wkd
+              number: 8010
 {{- end -}}
 {{- end -}}
 {{- end -}}

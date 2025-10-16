@@ -41,7 +41,7 @@ spec:
           service:
             name: "{{ $.Release.Name }}-synapse"
             port:
-              name: haproxy-403
+              number: 8009
 {{- end }}
 {{- end }}
 {{- range $synapsePath := (list "/_matrix" "/_synapse") -}}
@@ -65,7 +65,7 @@ spec:
           service:
             name: "{{ $.Release.Name }}-synapse"
             port:
-              name: haproxy-synapse
+              number: 8008
 {{- end }}
 {{- end }}
 {{- end -}}
